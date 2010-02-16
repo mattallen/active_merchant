@@ -29,6 +29,10 @@ module ActiveMerchant #:nodoc:
 
       class Customer < ProxyBase
         attr_accessor :options
+        
+        def self.model_name
+          :customer
+        end
 
         def initialize(attributes = {}, options = {})
           self.fields = [ :id, :ref, :title, :first_name, :last_name, :company, :job_desc, :email, :address, :suburb, :state, :post_code, :country, :phone, :mobile, :fax, :url, :comments ]
