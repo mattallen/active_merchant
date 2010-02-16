@@ -31,7 +31,7 @@ module ActiveMerchant #:nodoc:
         attr_accessor :options
         
         def self.model_name
-          :customer
+          "customer"
         end
 
         def initialize(attributes = {}, options = {})
