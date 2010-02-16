@@ -31,7 +31,7 @@ module ActiveMerchant #:nodoc:
         attr_accessor :options
         
         def self.model_name
-          "customer"
+          ActiveModel::Name.new(self.to_s)
         end
 
         def initialize(attributes = {}, options = {})
@@ -180,7 +180,7 @@ module ActiveMerchant #:nodoc:
 
       class Payment < ProxyBase
         def self.model_name
-          "payment"
+          ActiveModel::Name.new(self.to_s)
         end
         def initialize(attributes = {})
           self.fields = [ :id, :customer_id, :amount, :invoice_reference, :invoice_description ]
