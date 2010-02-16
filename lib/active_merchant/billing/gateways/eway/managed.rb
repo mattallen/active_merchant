@@ -179,6 +179,9 @@ module ActiveMerchant #:nodoc:
       end
 
       class Payment < ProxyBase
+        def self.model_name
+          "payment"
+        end
         def initialize(attributes = {})
           self.fields = [ :id, :customer_id, :amount, :invoice_reference, :invoice_description ]
           super
